@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
@@ -17,23 +17,38 @@
       <header>
         <h1>Marxist.js.org</h1>
         <p>The Classless Javascript movement</p>
-
-        <p class="view"><a href="https://github.com/ohmfox/marxist.js.org">View the Project on GitHub <small>ohmfox/marxist.js.org</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/ohmfox/marxist.js.org/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/ohmfox/marxist.js.org/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/ohmfox/marxist.js.org">View On <strong>GitHub</strong></a></li>
-        </ul>
       </header>
       <section>
-        <h3>
-<a id="gonna-make-this-happen-soon" class="anchor" href="#gonna-make-this-happen-soon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gonna make this happen soon...</h3>
+        <h2>What is this?</h2>
+        <p>
+        ES6 added the <code>class</code> keyword to Javascript. 
+        We think that this adds far too much complexity to Javascript
+        and that the built in "class-like" abilities of Javascript are much more clear and powerful.
+        </p>
+        <h2>Let's see an example</h2>
+        <p>
+        Someone recently pointed me to this code:
+        <code>
+          var aClass = arg => class {
+          constructor() {
+          console.log(arg);
+          }
+          };
+          new (aClass("ey"))(); //prints "ey" and retuns an object
+        </code>
+        At first glance this looks pretty weird, since there is a lot of obfuscation happening here.
+        However, this code translates to something very simple to read and understand. 
+        <code>
+          var aClass = (arg) => {
+            return function() {
+              console.log(arg);
+            }
+          }
+        </code>
+        </p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ohmfox">ohmfox</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
