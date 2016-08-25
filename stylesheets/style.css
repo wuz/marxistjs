@@ -24,10 +24,23 @@ h6 {
   font-weight:200;
 }
 
+p {
+  max-width: 42em;
+}
+
 .container {
   padding:2% 5%;
 }
 
 pre {
   display:block;
+  font-size: 14px;
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 2% 5%;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
 }

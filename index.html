@@ -42,7 +42,7 @@
         <p>
         At first glance this looks pretty weird. There is a closure, an arrow function, 
         a class keyword, 
-        However, this code translates to something very simple to read and understand. 
+        However, with a little work (converting the <code class="language-js"> class</code> to function) this code becomes easy to read and understand. 
         </p>
         <pre>
         <code class="language-js">
@@ -57,11 +57,22 @@
         </code>
         </pre>
       </section>
+      <section>
+        <h2>So what are you saying?</h2>
+        <p>Basically, there are lots of good reasons not to use the Javascript <code class="language-js">class</code> keyword but the most important is this &mdash; the <code class="language-js">class</code> keyword hides a lot of the behind the scenes parts of Javascript and abstracts away from what is actually happening. It is much better to use a function or an object and <a href="https://davidwalsh.name/javascript-objects">work directly with the prototype</a>. 
+      </section>
+      <section>
+        <h2>Does anybody else think this is a good idea?</h2>
+        <p>Some big JS people have written about "classless" Javascript.</p>
+        <p>Here are a few examples and links to other thinking.</p>
+        <ul>
+          <li><a href="https://davidwalsh.name/javascript-objects-distractions">Kyle Simpson: JS Object Disctractions</a></li>
+        </ul>
+      </section>
       <footer>
         <a href="https://js.org" target="_blank" title="JS.ORG | JavaScript Community">
           <img src="https://logo.js.org/dark_horz.png" width="102" alt="JS.ORG Logo"/></a>
-        <!-- alternatives [bright|dark]_[horz|vert|tiny].png (width[horz:102,vert:50,tiny:77]) -->
-        <p>This project is maintained by <a href="https://github.com/ohmfox">ohmfox</a></p>
+        <p>This project is maintained by <a href="https://github.com/ohmfox">ohmfox</a>. Want to help? <a href="https://github.com/ohmfox/marxistjs">Make a pull request!</a></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
