@@ -22,52 +22,26 @@
         <h2>Down with Javascript classes!</h2>
         <p>
         ES6 added the <code class="language-js">class</code> keyword to Javascript. 
-        We think that this adds far too much complexity to Javascript
-        and that the built in "class-like" abilities of Javascript are much more clear and powerful.
+        This syntax is essentially a wrapper for the [[Prototype]] chain to make a more seamless transition
+        for developers used to other object oriented languages. It abstracts out the conventional <code>.prototype</code>
+        boilerplate.
         We are proposing that Javascript developers avoid the <code class="language-js">class</code> keyword
-        in favor of more powerful alternatives.
+        in favor of clearer alternatives.
         </p>
-        <h2>An example for the masses!</h2>
-        <p>
-        Take a look at this code.
-        </p>
-        <pre>
-        <code class="language-js">
-          var aClass = arg => class {
-            constructor() {
-              console.log(arg);
-            }
-          };
-          new (aClass("ey"))(); //prints "ey" and returns an object
-        </code>
-        </pre>
-        <p>
-        At first glance this looks pretty weird. There is a closure, an arrow function, 
-        a class keyword, 
-        However, with a little work (converting the <code class="language-js"> class</code> to function) this code becomes easy to read and understand. 
-        </p>
-        <pre>
-        <code class="language-js">
-          var aClass = (arg) => {
-            return function() {
-              console.log(arg);
-              return {};
-            }
-          }
-          new (aClass("ey"))(); // prints "ey" and returns an object
-        </code>
-        </pre>
       </section>
       <section>
         <h2>So what are you saying?</h2>
         <p>Basically, there are lots of good reasons not to use the Javascript <code class="language-js">class</code> 
         keyword but the most important is that the <code class="language-js">class</code> keyword hides a lot of the
-        behind the scenes parts of Javascript and abstracts away from what is actually happening. It is much better 
-        to use a function or an object and <a href="https://davidwalsh.name/javascript-objects">work directly with the prototype</a>. 
+        behind the scenes parts of Javascript and abstracts away from what is actually happening. Here is the real kicker</p>
+        <strong>Classical inheritance (like classes) is not the same as Prototypal inheritance.</strong>
+
+        <p>By confusing the two in our code, we do a disservice to ourselves and to other developers who must understand our code.
+        It is much better to use a function or an object and <a href="https://davidwalsh.name/javascript-objects">work directly with the prototype</a>. </p>
       </section>
       <section>
         <h2>Does anybody else think this is a good idea?</h2>
-        <p>Some big JS people have written about "classless" Javascript.</p>
+        <p>Some big JS people have written about classes and Javascript.</p>
         <p>Here are a few links:</p>
         <ul>
           <li><a href="https://davidwalsh.name/javascript-objects-distractions">Kyle Simpson: JS Object Disctractions</a></li>
