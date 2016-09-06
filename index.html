@@ -19,15 +19,17 @@
         <p>The Classless Javascript Manifesto</p>
       </header>
       <section>
-        <h2>What is this?</h2>
+        <h2>Down with Javascript classes!</h2>
         <p>
         ES6 added the <code class="language-js">class</code> keyword to Javascript. 
         We think that this adds far too much complexity to Javascript
         and that the built in "class-like" abilities of Javascript are much more clear and powerful.
+        We are proposing that Javascript developers avoid the <code class="language-js">class</code> keyword
+        in favor of more powerful alternatives.
         </p>
-        <h2>Let's see an example</h2>
+        <h2>An example for the masses!</h2>
         <p>
-        Someone recently pointed me to this code:
+        Take a look at this code.
         </p>
         <pre>
         <code class="language-js">
@@ -52,14 +54,16 @@
               return {};
             }
           }
-          var aClassReturn = aClass("ey"); // returns a function
-          var instanceOfaClassReturn = new aClassReturn(); // returns an object and prints "ey";
+          new (aClass("ey"))(); // prints "ey" and returns an object
         </code>
         </pre>
       </section>
       <section>
         <h2>So what are you saying?</h2>
-        <p>Basically, there are lots of good reasons not to use the Javascript <code class="language-js">class</code> keyword but the most important is this &mdash; the <code class="language-js">class</code> keyword hides a lot of the behind the scenes parts of Javascript and abstracts away from what is actually happening. It is much better to use a function or an object and <a href="https://davidwalsh.name/javascript-objects">work directly with the prototype</a>. 
+        <p>Basically, there are lots of good reasons not to use the Javascript <code class="language-js">class</code> 
+        keyword but the most important is that the <code class="language-js">class</code> keyword hides a lot of the
+        behind the scenes parts of Javascript and abstracts away from what is actually happening. It is much better 
+        to use a function or an object and <a href="https://davidwalsh.name/javascript-objects">work directly with the prototype</a>. 
       </section>
       <section>
         <h2>Does anybody else think this is a good idea?</h2>
@@ -67,6 +71,7 @@
         <p>Here are a few examples and links to other thinking.</p>
         <ul>
           <li><a href="https://davidwalsh.name/javascript-objects-distractions">Kyle Simpson: JS Object Disctractions</a></li>
+          <li><a href="http://raganwald.com/2015/06/04/classes-are-expressions.html">Reginald Braithwaite: Classes are Expressions</a></li>
         </ul>
       </section>
       <footer>
